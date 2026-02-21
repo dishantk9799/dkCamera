@@ -39,6 +39,12 @@ h4 {
   font-size: 14px;
 }
 
+h6 {
+  color: #0480B1;
+  font-size: 16px;
+  font-family: 'camera';
+}
+
 p {
   color: rgba(0, 0, 0, 0.348);
 }
@@ -147,7 +153,7 @@ nav {
 .page2 {
   min-height: 100vh;
   width: 100%;
-  background-color: green;
+  background-color: black;
   margin-top: 100vh;
   position: relative;
   z-index: 2;
@@ -172,7 +178,8 @@ nav {
   align-items: center;
 
 }
-.top-text{
+
+.top-text {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -194,7 +201,7 @@ nav {
 }
 
 .top-text h4 {
- color: #f3241f;
+  color: #f3241f;
 }
 
 .top-text button {
@@ -208,23 +215,128 @@ nav {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: .5px;
-  background:black;
+  background: black;
 }
 
 
 .page2-center {
   grid-area: center;
-  background-color: blue;
+  background-color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.page2-center h3 {
+  font-size: 2vw;
+  color: #2a2a2a;
+  text-align: center;
+}
+
+.page2-center h3:hover {
+  color: white;
+}
+
+.page2-center img {
+  height: 25vw;
+  width: 15vw;
 }
 
 .page2-left {
   grid-area: left;
-  background-color: coral;
+  background-color: #f3241f;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+
+
+}
+
+.page2-left img {
+  height: 12vw;
+  width: 15vw;
+}
+
+.page2-left h3 {
+  color: white;
+  font-size: 2vw;
+}
+
+.page2-left h4 {
+  color: white;
+}
+
+.page2-left p {
+  color: rgba(255, 255, 255, 0.542);
+}
+
+.left-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .page2-right {
   grid-area: right;
-  background-color: cornflowerblue;
+  background-color: #0480B1;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page2-right img {
+  height: 18vw;
+  width: 16vw;
+  animation: lenRotate 5s linear infinite;
+}
+
+@keyframes lenRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* page3 */
+.page3 {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #000000, #111111);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding: 40px 40px;
+  position: relative;
+  z-index: 3;
+}
+
+.page3-img {
+  background: url(./img/hero/five.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page3-img img {
+  width: 60vw;
 }
 
 
@@ -277,6 +389,33 @@ nav {
       "center center";
   }
 
+  .page2-center h3 {
+    font-size: 4vw;
+    color: white;
+  }
+
+  .page2-left img {
+    height: 18vw;
+    width: 24vw;
+  }
+
+  .page2-left h3 {
+    font-size: 4vw;
+  }
+
+  .page2-left h4 {
+    font-size: 2vw;
+  }
+
+  .page2-left p {
+    font-size: 2vw;
+  }
+
+  .page2-right img {
+    height: 25vw;
+    width: 23vw;
+  }
+
 }
 
 @media (max-width:640px) {
@@ -302,19 +441,53 @@ nav {
       "right"
       "center";
   }
-  .page2-top {
-  grid-area: top;
-  background-color: white;
-  border-radius: 20px;
-  padding: 10px 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 
-}
-.top-img img {
-  height: 25vw;
-  width: 25vw;
-}
+  .page2-top {
+    grid-area: top;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .top-img img {
+    height: 25vw;
+    width: 25vw;
+  }
+
+  .page2-center h3 {
+    font-size: 4vw;
+    color: white;
+  }
+
+  .page2-center img {
+    height: 50vw;
+    width: 30vw;
+  }
+
+  .page2-left img {
+    height: 30vw;
+    width: 40vw;
+  }
+
+  .page2-left h3 {
+    font-size: 8vw;
+  }
+
+  .page2-left h4 {
+    font-size: 5vw;
+  }
+
+  .page2-left p {
+    font-size: 5vw;
+  }
+
+  .page2-right img {
+    height: 40vw;
+    width: 36vw;
+  }
 }
